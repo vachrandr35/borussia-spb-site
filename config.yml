@@ -1,0 +1,82 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_LOGIN/borussia-spb-site   # заменить на свой репозиторий
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Сайт"
+    files:
+      - name: "data"
+        label: "Данные сайта"
+        file: "data/site.json"
+        fields:
+          - label: "Клуб"
+            name: "club"
+            widget: object
+            fields:
+              - { label: "Название", name: "name", widget: string }
+              - { label: "Слоган", name: "tagline", widget: string }
+
+          - label: "Состав"
+            name: "roster"
+            widget: list
+            label_singular: "игрок"
+            fields:
+              - { label: "Номер", name: "number", widget: number, value_type: int }
+              - { label: "Фамилия и имя", name: "name", widget: string }
+              - { label: "Фото (необязательно)", name: "photo", widget: image, required: false }
+
+          - label: "Расписание"
+            name: "schedule"
+            widget: list
+            label_singular: "матч"
+            fields:
+              - { label: "Дата", name: "date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Время", name: "time", widget: string, required: false }
+              - { label: "Команда дома", name: "home", widget: string }
+              - { label: "Команда в гостях", name: "away", widget: string }
+              - { label: "Место", name: "place", widget: string, required: false }
+
+          - label: "Результаты"
+            name: "results"
+            widget: list
+            label_singular: "результат"
+            fields:
+              - { label: "Дата", name: "date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Команда дома", name: "home", widget: string }
+              - { label: "Команда в гостях", name: "away", widget: string }
+              - { label: "Голы дома", name: "scoreHome", widget: number, value_type: int }
+              - { label: "Голы в гостях", name: "scoreAway", widget: number, value_type: int }
+
+          - label: "Статистика"
+            name: "stats"
+            widget: object
+            fields:
+              - { label: "Матчей", name: "matches", widget: number, value_type: int, default: 0 }
+              - { label: "Побед", name: "wins", widget: number, value_type: int, default: 0 }
+              - { label: "Ничьих", name: "draws", widget: number, value_type: int, default: 0 }
+              - { label: "Поражений", name: "losses", widget: number, value_type: int, default: 0 }
+              - { label: "Забито мячей", name: "goals", widget: number, value_type: int, default: 0 }
+
+          - label: "Фотогалерея"
+            name: "gallery"
+            widget: list
+            label_singular: "фото"
+            fields:
+              - { label: "Фото", name: "image", widget: image }
+              - { label: "Подпись", name: "caption", widget: string, required: false }
+              - { label: "Ссылка на видео (YouTube, VK)", name: "video", widget: string, required: false }
+
+          - label: "Контакты"
+            name: "contacts"
+            widget: object
+            fields:
+              - { label: "Тренерский штаб", name: "coach", widget: string, required: false }
+              - { label: "Телефон", name: "phone", widget: string, required: false }
+              - { label: "Почта", name: "email", widget: string, required: false }
+              - { label: "Telegram", name: "telegram", widget: string, required: false }
+              - { label: "Где и когда тренируемся", name: "training", widget: string, required: false }

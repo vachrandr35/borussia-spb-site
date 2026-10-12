@@ -1,0 +1,38 @@
+{
+  "club": {
+    "name": "Боруссия Санкт-Петербург",
+    "tagline": "Желто-чёрные. Петербург. Вместе."
+  },
+  "roster": [
+    { "number": 1, "name": "Исмаилов Али", "photo": "" },
+    { "number": 2, "name": "Рустамов Мураз", "photo": "" },
+    { "number": 3, "name": "Вахрушев Андрей", "photo": "" },
+    { "number": 4, "name": "Ломакин Сергей", "photo": "" },
+    { "number": 5, "name": "Митраков Михаил", "photo": "" },
+    { "number": 6, "name": "Смородин Дмитрий", "photo": "" },
+    { "number": 7, "name": "Крутицкий Александр", "photo": "" },
+    { "number": 8, "name": "Кебу Татса", "photo": "" },
+    { "number": 9, "name": "Туров Алексей", "photo": "" },
+    { "number": 10, "name": "Буднев Артём", "photo": "" },
+    { "number": 11, "name": "Казаченок Матвей", "photo": "" },
+    { "number": 12, "name": "Голубев Александр", "photo": "" },
+    { "number": 13, "name": "Семин Михаил", "photo": "" }
+  ],
+  "schedule": [],
+  "results": [],
+  "stats": {
+    "matches": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goals": 0
+  },
+  "gallery": [],
+  "contacts": {
+    "coach": "",
+    "phone": "",
+    "email": "",
+    "telegram": "",
+    "training": ""
+  }
+}
